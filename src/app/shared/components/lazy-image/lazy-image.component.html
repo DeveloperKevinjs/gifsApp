@@ -1,0 +1,14 @@
+<img
+  class="h-56 max-w-full rounded-t-md object-cover animate__animated animate__fadeIn"
+  [src]="urlImage"
+  [alt]="titleImage"
+  (load)="onInit()"
+  [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+/>
+
+<img
+  *ngIf="!hasLoaded"
+  class="h-12 max-w-full rounded-t-md object-cover"
+  src="assets/lazyImage.svg"
+  alt="loader"
+/>
